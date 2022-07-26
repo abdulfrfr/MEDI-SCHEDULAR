@@ -21,10 +21,7 @@ module.exports = {
     //   'sm': {'max': '639px'},
     //   // => @media (max-width: 639px) { ... }
     // }
-    backgroundImage: {
-      'home-img': "url('/img/home.jpg')",
-      'footer-texture': "url('/img/footer-texture.png')",
-    }
+    
   },
   plugins: [],
 }
