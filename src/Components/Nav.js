@@ -38,9 +38,26 @@ function Nav(){
                 <h4 className='mr-7 border-b-2 border-slate-600 hover:border-white cursor-pointer text-md'>EVENTS</h4>
             </div>
         </section>
+        <section className='hidden bg-slate-600'>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer '>Home</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer'>Hospitals</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer'>Doctors</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer '>Appointment</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer '>Careers</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer '>Pay a Bill</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer '>Login</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer '>Sign Up</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer' >DOCTORS</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer' >HOSPITALS</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer' >VACATIONS</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer' >APPOINTMENTS</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer' >TESTIMONIES</h6>
+            <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer' >EVENTS</h6>
+
+        </section>
         <section className='py-3 md:px-10 px-5 bg-amber-100'>
             <div className='flex items-center text-sm md:text-md'><RiErrorWarningFill className='mr-2 text-amber-400 text-xl'/> <a href='http://wwww.twitter.com/abdulfrfr/' className='border-b-2 border-black cursor-pointer'>COVID-19 Resource Center</a> </div>
-            <p className='md:px-6 px-2 mt-2 text-sm md:text-md'>Review the latest information on visitor policies, safety procedures, vaccines, and more in the <a href='http://wwww.twitter.com/abdulfrfr/' className='border-b-2 border-black cursor-pointer'>COVID-19 Resource Center.</a></p>
+            <p className='md:px-6 pl-7 mt-2 text-sm md:text-md'>Review the latest information on visitor policies, safety procedures, vaccines, and more in the <a href='http://wwww.twitter.com/abdulfrfr/' className='border-b-2 border-black cursor-pointer'>COVID-19 Resource Center.</a></p>
             
         </section>
         </nav>
