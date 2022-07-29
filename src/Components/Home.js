@@ -1,26 +1,27 @@
-import React from 'react';
+import home from './home.jpg'
+import {BsArrowRight} from 'react-icons/bs'
 
-function Home (){
-    return (
-        <section>
-        <section id='main' className='bg-cover bg-[url("https://images.pexels.com/photos/2867895/pexels-photo-2867895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")]
-        md:h-full'>
-        <div className='py-10 md:py-32 px-5 md:px-10 text-center md:text-left flex justify-center items-center md:justify-evenly md:items-center'>
-            <h1 className='text-gray-300 font-bold text-2xl md:text-7xl w-full md:w-2/4'>WHAT MAKES US BETTER, MAKES YOU BETTER.</h1>
-            <div className='hidden md:flex flex-col'>
-                <div className='sides w-96 py-7 px-5 mb-5' style={{background:'rgba( 255, 255, 255, 0.55 )', boxShadow:'0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', backdropFilter:'blur( 4px )', webkitBackdropFilter:'blur( 4px )', borderRadius: '10px', border:'1px solid rgba( 255, 255, 255, 0.18 )' }}>Home</div>
-                <div className='sides w-96 py-7 px-5 mb-5' style={{background:'rgba( 255, 255, 255, 0.55 )', boxShadow:'0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', backdropFilter:'blur( 4px )', webkitBackdropFilter:'blur( 4px )', borderRadius: '10px', border:'1px solid rgba( 255, 255, 255, 0.18 )' }}>About</div>
-                <div className='sides w-96 py-7 px-5 mb-5' style={{background:'rgba( 255, 255, 255, 0.55 )', boxShadow:'0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', backdropFilter:'blur( 4px )', webkitBackdropFilter:'blur( 4px )', borderRadius: '10px', border:'1px solid rgba( 255, 255, 255, 0.18 )' }}>Contact</div>
+function Home(){
+    return(
+        <section className='w-full h-screen'>
+            <div className='bg-gray-900/90 w-full md:h-[700px] absolute'>
+            <img src={home} alt="home" className='w-full md:h-full  mix-blend-overlay'/>
             </div>
-        </div>
-        </section>
-        <section className='block md:hidden flex justify-evenly items-center py-2 px-2'>
-        <div className='bg-white text-center py-4 px-3 text-xs'>CONTACT</div>
-        <div className='bg-white text-center py-4 px-3 text-xs'>BOOK APPOINTMENT</div>
-        <div className='bg-white text-center py-4 px-3 text-xs'>FIND DOCTORS</div>
-        </section>
+                
+            <div className='relative pt-14 pb-7 md:px-52 md:pt-52 md:pb-40 md:flex-col justify-center items-center text-center'>
+                <h1 className='text-white text-2xl font-bold md:text-6xl md:font-extrabold md:py-10'>WITH GOOD HEALTH COMES GOOD STRENGHT</h1>
+                <p className='text-gray-400 text-xs md:text-lg text-center '>Veniam est ea aliqua in pariatur tempor exercitation elit amet. Occaecat 
+                esse esse duis sint. Ad Lorem dolor aliqua dolore cupidatat duis veniam consequat
+                 est nulla est irure eu qui. Nulla dolore officia magna eu ullamco culpa. Culpa fugiat
+                  tempor reprehenderit reprehenderit duis cupidatat Lorem consectetur enim nisi exercitation.</p>    
+            </div>
+            <div className='relative flex-col items-center justify-between md:flex '>
+                <div className='bg-gray-300 rounded-md py-12 px-10 flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Appointments <BsArrowRight/></div>
+                <div className='bg-gray-300 rounded-md py-12 px-10 flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Doctors <BsArrowRight/></div>
+                <div className='bg-gray-300 rounded-md py-12 px-10 flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Hospitals <BsArrowRight/></div>
+            </div>
         </section>
     )
 }
 
-export default Home;
+export default Home

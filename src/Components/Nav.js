@@ -22,7 +22,7 @@ function Nav(){
         <section className='bg-slate-600 text-white py-5 md:px-10 px-5'>
             <div className='flex justify-between items-center'>
             <AiOutlineMenu className='text-white md:hidden font-bold text-xl'/>
-                <h1 className='font-bold border-b-4 border-white w-20'>SCHDULEs</h1>
+                <h1 className='font-bold text-2xl'>MEDI SCHEDULAR</h1>
                 <div className='md:border-b-2 md:border-gray-400 flex md:justify-between items-center pr-2 pl-2'>
                     <input className='bg-slate-600 hidden md:block border-bg-slate-600  w-60 outline-none pr-5' type='text' placeholder='what are you curious about?' value=''/>
                     <FiSearch className='text-xl'/>
