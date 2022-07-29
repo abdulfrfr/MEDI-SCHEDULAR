@@ -15,10 +15,10 @@ function Home(){
                  est nulla est irure eu qui. Nulla dolore officia magna eu ullamco culpa. Culpa fugiat
                   tempor reprehenderit reprehenderit duis cupidatat Lorem consectetur enim nisi exercitation.</p>    
             </div>
-            <div className='relative flex-col items-center justify-between md:flex-row '>
-                <div className='bg-gray-300 rounded-md py-12 mx-20 px-10 md:pl-10 md:w-80 md:pr-0 md:justify-evenly flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Appointments <BsArrowRight/></div>
-                <div className='bg-gray-300 rounded-md py-12 mx-20 px-10 md:pl-10 md:w-80 md:pr-0 md:justify-evenly flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Doctors <BsArrowRight/></div>
-                <div className='bg-gray-300 rounded-md py-12 mx-20 px-10 md:pl-10 md:w-80 md:pr-0 md:justify-evenly flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Hospitals <BsArrowRight/></div>
+            <div className='relative sm:flex-col items-center justify-between md:flex-row'>
+                <div className='bg-gray-300 rounded-md py-12 mx-20 px-10 md:pl-6 md:w-80 md:pr-0 md:justify-evenly flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Appointments <BsArrowRight/></div>
+                <div className='bg-gray-300 rounded-md py-12 mx-20 px-10 md:pl-6 md:w-80 md:pr-0 md:justify-evenly flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Doctors <BsArrowRight/></div>
+                <div className='bg-gray-300 rounded-md py-12 mx-20 px-10 md:pl-6 md:w-80 md:pr-0 md:justify-evenly flex justify-between mb-10 w-52 text-lg text-indigo-700 items-center'>Hospitals <BsArrowRight/></div>
             </div>
         </section>
     )
