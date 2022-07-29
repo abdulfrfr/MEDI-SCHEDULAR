@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { RiErrorWarningFill } from 'react-icons/ri'
 
 function Nav(){
+const [openNav, setOpenNav] = useState(false);
+
+function open(){
+setOpenNav(!openNav)
+}
     return(
         <nav>
         <section className='bg-slate-800 hidden text-gray-400 py-2 md:px-10 px-5 xl:flex justify-start xl:justify-end '>
@@ -21,7 +26,7 @@ function Nav(){
         </section>
         <section className='bg-slate-600 text-white py-5 md:px-10 px-5'>
             <div className='flex justify-between items-center'>
-            <AiOutlineMenu className='text-white md:hidden font-bold text-xl'/>
+            <AiOutlineMenu onClick={open} className='text-white md:hidden font-bold text-xl'/>
                 <h1 className='font-bold text-2xl'>MEDI SCHEDULAR</h1>
                 <div className='md:border-b-2 md:border-gray-400 flex md:justify-between items-center pr-2 pl-2'>
                     <input className='bg-slate-600 hidden md:block border-bg-slate-600  w-60 outline-none pr-5' type='text' placeholder='what are you curious about?' value=''/>
@@ -38,7 +43,7 @@ function Nav(){
                 <h4 className='mr-7 border-b-2 border-slate-600 hover:border-white cursor-pointer text-md'>EVENTS</h4>
             </div>
         </section>
-        <section className='hidden bg-slate-600'>
+        <section className={openNav? 'block bg-slate-600 pt-5 pb-10' :'hidden'}>
             <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer '>Home</h6>
             <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer'>Hospitals</h6>
             <h6 className='mx-3 mb-2 text-gray-300 hover:text-white cursor-pointer'>Doctors</h6>
