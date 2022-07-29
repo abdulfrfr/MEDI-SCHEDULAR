@@ -12,13 +12,12 @@ function Home(){
                 <h1 className='text-white text-2xl font-bold md:text-6xl md:font-extrabold md:py-10'>WITH GOOD HEALTH COMES GOOD STRENGHT</h1>
                 <p className='text-gray-400 text-xs md:text-lg text-center '>Veniam est ea aliqua in pariatur tempor exercitation elit amet. Occaecat 
                 esse esse duis sint. Ad Lorem dolor aliqua dolore cupidatat duis veniam consequat
-                 est nulla est irure eu qui. Nulla dolore officia magna eu ullamco culpa. Culpa fugiat
-                  tempor reprehenderit reprehenderit duis cupidatat Lorem consectetur enim nisi exercitation.</p>    
+                 est nulla est irure eu qui. Nulla dolore officia </p>    
             </div>
-            <div className='relative  md:flex-row'>
-                <div className='bg-gray-300 rounded-md py-12 mx-20 px-5 md:px-20 md:justify-evenly flex justify-between mb-10 text-xl text-indigo-700 items-center'>Appointments <BsArrowRight/></div>
-                <div className='bg-gray-300 rounded-md py-12 mx-20 px-5 md:px-20 md:justify-evenly flex justify-between mb-10 text-xl text-indigo-700 items-center'>Doctors <BsArrowRight/></div>
-                <div className='bg-gray-300 rounded-md py-12 mx-20 px-5 md:px-20 md:justify-evenly flex justify-between mb-10 text-xl text-indigo-700 items-center'>Hospitals <BsArrowRight/></div>
+            <div className='relative  md:flex justify-evenly itmes-center '>
+                <div className='bg-gray-300 rounded-xl py-12 mx-20 px-10 text-center justify-evenly flex mb-10 text-xl text-indigo-700 items-center'><h4>GET APPOINTMENTS</h4></div>
+                <div className='bg-gray-300 rounded-xl py-12 mx-20 px-10 text-center justify-evenly flex mb-10 text-xl text-indigo-700 items-center'><h4>FIND A DOCTORS</h4></div>
+                <div className='bg-gray-300 rounded-xl py-12 mx-20 px-10 text-center justify-evenly flex mb-10 text-xl text-indigo-700 items-center'><h4>SEARCH HOSPITALS</h4></div>
             </div>
         </section>
     )
