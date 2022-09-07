@@ -1,16 +1,18 @@
-import Nav from './Components/Nav'
-import Home from './Components/Home'
-// import Covid from './Components/Covid'
-// import CovidEx from './Components/CovidEx'
+import {useState, useEffect} from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Parmernent from './Components/Parmernent'
+import Login from './Components/Login'
+
 
 function App() {
+
   return (
-    <div className="App">
-      
-    <Nav />
-    <Home/>
-    
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login/>}/>
+        <Route path='/infos' element={<Parmernent/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
