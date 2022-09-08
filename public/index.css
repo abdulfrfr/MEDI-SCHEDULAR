@@ -10,7 +10,37 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
+
+.stats {
+  margin: 1.5625rem 0;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  border: 1.5625rem solid transparent;
+  background-size: 100% 100%, 50% 50%, 50% 50%, 40% 40%, 60% 60%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(-40deg, #02BF02 36%, #02BF02  30%),
+                    linear-gradient(120deg, #FFB733 36%, #FFB733 30%),
+                    linear-gradient(210deg, rgb(0, 158, 250) 20%, rgb(0, 158, 250) 14%),
+                    linear-gradient(300deg, #FFB733 36%, #FFB733 30%);
+                    
+  background-position: center center, left top, right top, left bottom, right bottom;
+  background-origin: content-box, border-box, border-box, border-box, border-box;
+  background-clip: content-box, border-box, border-box, border-box, border-box;
+  
+}
+
+
+.curve {
+    width: 12.5rem; 
+    height: 12.5rem;  
+    border: solid 2.3125rem #BC3FBC;
+    border-color: #BC3FBC transparent transparent transparent;
+    border-radius: 50%/6.25rem 6.25rem 0 0;
+  }
 
 
 .sides{

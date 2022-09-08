@@ -11,7 +11,7 @@ const DashboardItems = [
         text: 'Total number of Applications made',
         number: '20,000+',
         num: '+55%',
-        style:'text-red-500 text-xs',
+        style:'text-red-500 font-bold text-xs',
         styles:'text-red-500 text-xl mb-3'
         
     },
@@ -21,7 +21,7 @@ const DashboardItems = [
         text: 'Total number of Active patients',
         number: '7,000+',
         num: '+93%',
-        style:'text-blue-500 text-xs',
+        style:'text-blue-500 font-bold text-xs',
         styles:'text-blue-500 text-xl mb-3'
     },
     {
@@ -30,7 +30,7 @@ const DashboardItems = [
         text: 'Total number of users',
         number: '45,000+',
         num: '+69%',
-        style:'text-green-500 text-xs',
+        style:'text-green-500 font-bold text-xs',
         styles:'text-green-500 text-xl mb-3'
     },
     {
@@ -39,7 +39,7 @@ const DashboardItems = [
         text: 'Total number of Services rendered',
         number: '75,000+',
         num: '+55%',
-        style:'text-orange-500 text-xs',
+        style:'text-orange-500 font-bold text-xs',
         styles:'text-orange-500 text-xl mb-3'
     },
 ]

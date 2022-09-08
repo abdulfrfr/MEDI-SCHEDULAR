@@ -43,7 +43,7 @@ function SideNav({setText, page, setPage}){
                 {items.map((item, index)=>(
                     <div id={index} onClick={()=> genId(index, item.text)} className={getId === index? 'flex justify-start items-center text-white cursor-pointer nav--sec pl-16 py-2 w-[20vw]' : 'flex justify-start items-center cursor-pointer text-slate-900 pl-16 py-2 w-[20vw]'}>
                         <item.icon className='mr-3 text-lg'/>
-                        <p className='text-[14px]'>{item.text}</p>
+                        <p className='text-[0.875rem]'>{item.text}</p>
                     </div>
                 ))}
 
