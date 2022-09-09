@@ -2,6 +2,12 @@ import {HiUsers} from 'react-icons/hi'
 import {BiTimeFive} from 'react-icons/bi'
 import {TiUserAddOutline} from 'react-icons/ti'
 import {BsCheckSquare} from 'react-icons/bs'
+import {AiFillStar} from 'react-icons/ai'
+import doc1 from './doc1.jpg'
+import doc2 from './doc2.jpg'
+import doc3 from './doc3.jpg'
+import doc4 from './doc4.jpg'
+import doc5 from './doc5.jpg'
 
 
 const DashboardItems = [
@@ -44,4 +50,71 @@ const DashboardItems = [
     },
 ]
 
+const doctor =[
+    {
+        key:1,
+        name:'Dr Olamide Akinyemi',
+        img:doc1,
+        number:'N89789',
+        icon:AiFillStar
+    },
+    {
+        key:2,
+        name:'Dr Matilda Felix',
+        img:doc2,
+        number:'N876',
+        icon:AiFillStar
+    },
+    {
+        key:3,
+        name:'Dr Sharon Njoku',
+        img:doc3,
+        number:'N3345',
+        icon:AiFillStar
+    },
+    {
+        key:4,
+        name:'Dr Blessing Abeh',
+        img:doc4,
+        number:'N8837',
+        icon:AiFillStar
+    },
+    {
+        key:5,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:4,
+        name:'Dr Blessing Abeh',
+        img:doc4,
+        number:'N8837',
+        icon:AiFillStar
+    },
+    {
+        key:5,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:5,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:5,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    }
+]
+
 export default DashboardItems
+export {doctor}
