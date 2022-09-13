@@ -1,8 +1,9 @@
 import {useState} from 'react'
-import {BsChevronDown, BsFilterLeft, BsThreeDots} from 'react-icons/bs'
-import {BiFilterAlt} from 'react-icons/bi'
+import {BsChevronDown, BsFilterLeft, BsThreeDots, BsEmojiSmile} from 'react-icons/bs'
+import {BiFilterAlt, BiSend} from 'react-icons/bi'
 import userMessages from './messagesItems'
 import {FaUserAlt} from 'react-icons/fa'
+import {GrAttachment} from 'react-icons/gr'
 import { items2 } from '../Dashboard/EngagementsItems';
 
 function Messages(){
@@ -32,7 +33,7 @@ function Messages(){
                     
                 </div>
             </div>
-            <div className='w-[25vw] flex justify-between items-center text-[1rem] px-4 mb-5'>
+            <div className='w-[25vw] flex justify-between items-center text-[1rem] px-4 '>
                 <div>Customer's Support (220)</div>
                 <div className='text-gray-400'>Staff (45)</div>
             </div>
@@ -101,7 +102,77 @@ function Messages(){
 
 
                 <div>
-                    
+                    <div className='mt-2'>
+                        <div className='flex justify-between items-center mt-0'>
+                            <div className='bg-gray-400 w-[2rem] h-[2rem] rounded-[50%]'></div>
+                            <div className='flex flex-col justify-center items-start'>
+                            <div className='px-5 py-2 rounded-2xl text-sm shadow-xl '><p>I need some help on my consultation registeration please</p></div>
+                            <div className='text-xs'><p>09:00am</p></div>
+                            </div>
+                        </div>
+
+
+
+                        <div>
+                        <div className='flex justify-end items-end mt-0'>
+                            <div className=' bg-gray-300 px-5 py-2 rounded-2xl text-sm  '><p>Hi, how may i help you please?</p></div>
+                        </div>
+                        <div className='flex justify-end items-end'>
+                            <div className='text-xs text-gray-400'><p>10:45am</p></div>
+                        </div>
+                        </div>
+
+
+
+                        <div className='flex justify-between items-center mt-0'>
+                            <div className='bg-gray-400 w-[2rem] h-[2rem] rounded-[50%]'></div>
+                            <div className='flex flex-col justify-center items-start'>
+                            <div className='px-5 py-2 rounded-2xl text-sm shadow-xl '><p>I need some help on my consultation registeration please</p></div>
+                            <div className='text-xs'><p>09:00am</p></div>
+                            </div>
+                        </div>
+
+
+
+                        <div>
+                            <div className='flex justify-end items-end mt-0'>
+                                <div className=' bg-gray-300 px-5 py-2 rounded-2xl text-sm  '><p>Okay, could you pleae send the appointment ID?</p></div>
+                            </div>
+                            <div className='flex justify-end items-end'>
+                                <div className='text-xs text-gray-400'><p>10:45am</p></div>
+                            </div>
+                        </div>
+
+
+                        <div className='flex justify-start items-center mt-0'>
+                            <div className='bg-gray-400 w-[2rem] h-[2rem] rounded-[50%]'></div>
+                            <div className=''>
+                        <div className='ml-4 bg-blue-300 flex justify-center items-center rounded-2xl w-[5vw] h-[5vh]'>
+                            <div className='bg-gray-300 w-2.5 h-2.5 rounded-[50%]'></div>
+                            <div className='bg-gray-200 w-2.5 h-2.5 rounded-[50%]'></div>
+                            <div className='bg-gray-100 w-2.5 h-2.5 rounded-[50%]'></div>
+                        </div>
+                        </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <div className='flex w-[35vw] ml-5 mt-4 rounded-sm justify-center items-center'>
+                    <div className='flex justify-start items-center'>
+                        <BsEmojiSmile className='text-lg mr-2'/>
+                        <input className='border-none outline-none bg-white text-gray-700 w-[30vw]' type='text' placeholder='Type Something...' name='message'/>
+                    </div>
+                    <div className='flex justify-start items-center'>
+                        <GrAttachment className='text-lg ml-4'/>
+                        <div className=' ml-2  bg-red-500 rounded-[50%] w-[2rem] h-[2rem] flex justify-center items-center'>
+                        <BiSend className='text-lg text-white '/>
+                        </div>
+                    </div>
+                        
+                    </div>
                 </div>
                 </div>
                 
