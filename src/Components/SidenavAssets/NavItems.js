@@ -4,7 +4,7 @@ import {FaUsers} from 'react-icons/fa';
 import {FiSettings} from 'react-icons/fi';
 import {MdOutlineDirectionsWalk} from 'react-icons/md';
 import Dashboard from '../Pages/Dashboard/Dashboard'
-import Messages from '../Pages/Messages'
+import Messages from '../Pages/Messages/Messages'
 import UserManagement from '../Pages/UserManagement'
 import Services from '../Pages/Services'
 import Doctors from '../Pages/Doctors'
@@ -23,7 +23,7 @@ const NavItems = [
     {
         key: 2,
         icon: BiEnvelope, 
-        text:'Messages',
+        text:'Inbox',
         page: Messages
     },
     {
