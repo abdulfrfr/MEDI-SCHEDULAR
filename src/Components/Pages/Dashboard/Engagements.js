@@ -3,6 +3,7 @@ import EngagementsItems, {items2, itemsPie} from "./EngagementsItems"
 import {HiUsers} from 'react-icons/hi'
 import {FaRegStar} from 'react-icons/fa'
 import {doctor} from './DashboardItems'
+import BarChart from './BarChart'
 
 function Engagements(){
     const [items, setItems] = useState(EngagementsItems)
@@ -12,18 +13,14 @@ function Engagements(){
     return(
         <section className="mx-7 mt-7 flex justify-between items-start">
         <div className='w-[48vw] h-[55vh]'>
-            <div className="w-[48vw] bg-white h-[39vh] rounded-2xl p-3">
+            <div className="w-[35vw] bg-white h-[47vh] rounded-2xl p-3">
                 <h1 className='mb-3'>Account Engagements</h1>
-                <div className='absolute'>
-                {items.map((item, index)=>(
-                    <div className="flex justify-between items-center mt-5">
-                    <p className='text-xs'>{item.text}</p>
-                    <div className="border-t-2 border-gray-100 w-[48vw]"></div>
-                    </div>
-               
-                ))}
-                </div>
-                <div className='flex justify-between items-end mx-8 relative h-[31vh]'>
+                
+                <div className=' '>
+                
+                <BarChart/>
+                
+                {/* <div className='flex justify-between items-end mx-8 relative h-[31vh]'>
                     {items1.map((item, index)=>(
                         <div className='flex flex-col'>
                         <div className='flex justify-center items-end'>
@@ -35,6 +32,7 @@ function Engagements(){
                             
                         </div>
                     ))}
+                </div> */}
                 </div>
             </div>
 
@@ -92,11 +90,14 @@ function Engagements(){
             <h1>Status Overview</h1>
             <div className='border-t-2 border-gray-100 w-[24vw]'></div>
             </div>
-                    <div className='flex flex-col justify-center items-center h-[15.625rem]'>
+            <div className=''>
+            <div className='flex flex-col justify-center items-center h-[15.625rem]'>
                     <div className='stats rounded-[50%] flex flex-col justify-center items-center'> <h1>100%</h1> <p>overall</p> </div>
                     <div className='curve -rotate-[100deg] absolute top-[19.375rem] right-[6.9375rem]'></div>
 
              </div>
+            </div>
+                
              <div className=''>
              {items3.map((item, index)=> (
                 <div className='flex justify-between items-center mx-5'>

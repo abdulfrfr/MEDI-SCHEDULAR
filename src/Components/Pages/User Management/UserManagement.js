@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import {FiFilter} from 'react-icons/fi'
 import {BsBoxArrowInDown} from 'react-icons/bs'
+import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import Users from './UserItems'
 
 function UserManagement(){
@@ -92,6 +93,18 @@ function UserManagement(){
                     </div>
 
                 ))}
+            </div>
+            
+
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             </div>
         </section>
