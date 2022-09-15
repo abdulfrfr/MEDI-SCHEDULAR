@@ -9,7 +9,7 @@ function Parmernent(){
 
     return(
 
-        <section className='flex '>
+        <section className='hidden md:flex '>
             <SideNav setText={setText} page={page} setPage={setPage}/>
             <Nav text={text} page={page} />
             

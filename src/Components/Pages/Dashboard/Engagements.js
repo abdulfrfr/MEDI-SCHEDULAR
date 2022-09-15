@@ -23,9 +23,9 @@ function Engagements(){
             </div>
 
             <div className='flex justify-between items-start mt-[10px]'>
-                <div className='bg-white w-[20vw] h-[40vh] rounded-xl p-2'>
+                <div className='bg-white w-[20vw] h-[40vh] overflow-hidden  rounded-xl p-2'>
                 <h1 className='mb-2'>Our Doctors</h1>
-                    <div className='flex flex-col justify-between items-start w-[19vw] h-[90vh] overflow-x-hidden overflow-y-scroll '>
+                    <div className='flex flex-col justify-between items-start w-[19vw] h-[20vh] overflow-x-hidden overflow-y-scroll '>
                     {doctors.map((doc, index)=>(
                         <div className='flex justify-between items-center'>
                             <div><img className='w-[50px] h-[50px] rounded-xl' src={doc.img} alt='doc-img'/></div>

@@ -7,13 +7,6 @@ function Login(){
 
     return(
         <section className= 'bg-gray-200 h-screen'>
-
-        <div className='h-screen flex justify-center items-center'>
-        <div className='w-[70vw] text-blue-600 text-center'>
-            <p>Please Visit on Your Desktop or Laptop Computer</p>
-        </div>
-        </div>
-
         <section className= 'hidden md:block bg-gray-200 h-screen'>
         <div className='ml-16'>
           <Logo />
@@ -38,6 +31,11 @@ function Login(){
 
         </div> 
         </section>
+        <div className='h-screen md:hidden flex justify-center items-center'>
+        <div className='w-[70vw] text-blue-600 text-center'>
+            <p>Please Visit on Your Desktop or Laptop Computer</p>
+        </div>
+        </div>
         </section>
     )
 }

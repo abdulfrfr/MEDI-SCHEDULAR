@@ -87,33 +87,145 @@ const doctor =[
         icon:AiFillStar
     },
     {
-        key:4,
+        key:6,
         name:'Dr Blessing Abeh',
         img:doc4,
         number:'N8837',
         icon:AiFillStar
     },
     {
-        key:5,
+        key:7,
         name:'Dr Donald Buah',
         img:doc5,
         number:'N76865',
         icon:AiFillStar
     },
     {
-        key:5,
+        key:8,
         name:'Dr Donald Buah',
         img:doc5,
         number:'N76865',
         icon:AiFillStar
     },
     {
-        key:5,
+        key:9,
         name:'Dr Donald Buah',
         img:doc5,
         number:'N76865',
         icon:AiFillStar
-    }
+    },
+    {
+        key:10,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:11,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:12,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:13,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:14,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:15,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:16,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:17,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:18,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:19,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:20,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:21,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:22,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:23,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:24,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
+    {
+        key:25,
+        name:'Dr Donald Buah',
+        img:doc5,
+        number:'N76865',
+        icon:AiFillStar
+    },
 ]
 
 export default DashboardItems
