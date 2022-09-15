@@ -83,7 +83,7 @@ function Engagements(){
             <div>
                 <div className='my-2 flex justify-between w-[20vw] items-center'>
                 <div className='flex justify-start items-center'>
-                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-green-500'></div>
+                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-[#FFB733]'></div>
                     <div><p>On Time</p></div>
                 </div>
                 <div><p>40%</p></div>
@@ -91,14 +91,14 @@ function Engagements(){
                 
                 <div className='my-2 flex justify-between w-[20vw] items-center'>
                 <div className='flex justify-start items-center'>
-                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-green-500'></div>
+                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-[#BC37BC]'></div>
                     <div><p>In Progress</p></div>
                 </div>
                 <div><p>40%</p></div>
                 </div>
                 <div className='my-2 flex justify-between w-[20vw] items-center'>
                 <div className='flex justify-start items-center'>
-                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-green-500'></div>
+                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-[#02B702]'></div>
                     <div><p>Delayed</p></div>
                 </div>
                 <div><p>40%</p></div>
