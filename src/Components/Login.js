@@ -9,7 +9,7 @@ function Login(){
         <section className= 'bg-gray-200 h-screen'>
 
         <div className='h-screen flex justify-center items-center'>
-        <div className='w-[50vw] text-blue-600 text-center'>
+        <div className='w-[70vw] text-blue-600 text-center'>
             <p>Please Visit on Your Desktop or Laptop Computer</p>
         </div>
         </div>
