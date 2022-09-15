@@ -9,10 +9,10 @@ import DouChart from './DouChart'
 function Engagements(){
     const [doctors, setDoctors] =useState(doctor)
     return(
-        <section className="mx-3 mt-5 flex justify-between items-start">
+        <section className="mx-[7rem] mt-5 flex justify-between items-start">
         <div className='w-[48vw] h-[60vh]'>
-            <div className="w-[48vw] bg-white h-[45vh] rounded-2xl p-5">
-                <h1 className=''>Account Engagements</h1>
+            <div className="w-[48vw] bg-white h-[37vh] rounded-2xl p-3">
+                <h1 className=' mb-1'>Account Engagements</h1>
                 
                 <div className=''>
                 <BarChart/>

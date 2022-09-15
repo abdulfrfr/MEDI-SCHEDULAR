@@ -4,7 +4,7 @@ import Engagements from './Engagements'
 function Dashboard(){
 
     return(
-        <section className='mt-5 mx-[auto] overflow-hidden'>
+        <section className='mt-5 px-7 mx-[auto] overflow-hidden'>
             <Menu/>
             <Engagements/>
         </section>

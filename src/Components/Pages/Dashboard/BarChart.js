@@ -33,10 +33,13 @@ const options = {
   },
   barPercentage: 0.1,
   scales: {
-    xAxis:{
+    x:{
       grid: {
         display: false
       }
+    },
+    y:{
+      
     }
     
 }};
@@ -49,7 +52,7 @@ const data = {
     {
 
       data: [10, 30, 25, 12, 15, 8, 35, 25, 40],
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      backgroundColor: '#FF0000',
       borderColor:'white',
       borderRadius: 10,
       barThickness: 10
@@ -57,7 +60,7 @@ const data = {
     {
 
       data: [25, 79, 30, 12, 10, 35, 55, 60, 80],
-      backgroundColor:'rgba(53, 162, 235, 0.5)',
+      backgroundColor:'#BC3FBC',
       borderColor:'white',
       borderRadius: 10,
       barThickness: 10
@@ -69,7 +72,7 @@ const data = {
  function BarChart() {
   return (
   <div className=' '>
-    <Bar  data={data} width={8} height={3} options={options}/>
+    <Bar  data={data} width={8} height={2} options={options}/>
   </div>
   );
 }
