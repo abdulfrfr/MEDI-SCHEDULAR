@@ -12,7 +12,7 @@ function Engagements(){
         <section className="mx-5 mt-5 flex justify-between items-start">
         <div className='w-[48vw] h-[60vh]'>
             <div className="w-[48vw] bg-white rounded-2xl p-3 ">
-            <div className='object-cover'>
+            <div className=''>
             <h1 className=' mb-1'>Account Engagements</h1>
                 
                 <div className=''>
@@ -71,13 +71,39 @@ function Engagements(){
 
 
             </div>
-            <div className="w-[25vw] bg-white h-[58vh] rounded-2xl px-3 py-2">
+            <div className="w-[25vw] bg-white  rounded-2xl px-3 py-2">
             <div className=''>
             <h1>Status Overview</h1>
             </div>
             <div>
             <div className='flex justify-center items-center'>
             <DouChart/>
+            </div>
+            <div className='flex justify-center items-center'>
+            <div>
+                <div className='my-2 flex justify-between w-[20vw] items-center'>
+                <div className='flex justify-start items-center'>
+                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-green-500'></div>
+                    <div><p>On Time</p></div>
+                </div>
+                <div><p>40%</p></div>
+                </div>
+                
+                <div className='my-2 flex justify-between w-[20vw] items-center'>
+                <div className='flex justify-start items-center'>
+                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-green-500'></div>
+                    <div><p>In Progress</p></div>
+                </div>
+                <div><p>40%</p></div>
+                </div>
+                <div className='my-2 flex justify-between w-[20vw] items-center'>
+                <div className='flex justify-start items-center'>
+                    <div className='mr-1 w-[12px] h-[12px] rounded-[50%] border-none bg-green-500'></div>
+                    <div><p>Delayed</p></div>
+                </div>
+                <div><p>40%</p></div>
+                </div>
+            </div>
             </div>
             </div>
                 

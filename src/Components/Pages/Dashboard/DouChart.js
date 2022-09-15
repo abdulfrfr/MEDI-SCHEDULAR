@@ -7,6 +7,7 @@ import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const options = {
+  cutout:70,
   responsive: true,
   plugins: {
     legend: {
@@ -28,11 +29,12 @@ const data = {
     {
       label: 'Losses',
       data: [100, 15, 25, 40],
-      backgroundColor:['orange', 'blue', 'purple', 'green'],
-      borderColor:['orange', 'blue', 'purple', 'green'],
+      backgroundColor:['#FFB733', '#00D7FF', '#BC37BC', '#02B702'],
+      borderColor:['#FFB733', '#00D7FF', '#BC37BC', '#02B702'],
       borderWidth:[1,1,20,1],
       width:[100, 30, 30, 30],
       borderRadius: 0,
+      barThickness: 15
     }
   ],
 };

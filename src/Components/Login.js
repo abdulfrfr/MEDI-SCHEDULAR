@@ -7,7 +7,9 @@ function Login(){
 
     return(
         <section className= ' bg-gray-200 h-screen'>
-        <div className='ml-16'>
+        
+
+        <div className='lg:hidden ml-16'>
           <Logo />
         </div> 
         <div className=' w-full h-[90vh] flex justify-center items-center '>
