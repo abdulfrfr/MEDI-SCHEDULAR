@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import NavItems from './NavItems'
 import Logo from '../Logo'
+import {FiSend} from 'react-icons/fi'
 
 function SideNav({setText, page, setPage}){
     const [getId, setGetId] = useState('')
@@ -35,7 +36,8 @@ function SideNav({setText, page, setPage}){
     }
 
     return(
-        <section className="h-screen w-[20vw] bg-white border-r-2 border-gray-100">
+        <section className="pb-10 flex flex-col justify-between items-center h-screen w-[20vw] bg-white border-r-2 border-gray-100">
+        <div>
         <div className='flex justify-center items-center '><Logo/></div>
             
             <div className='flex flex-col justify-between items-center h-[60vh] mt-10 w-[20vw]'>
@@ -51,6 +53,11 @@ function SideNav({setText, page, setPage}){
                 <p className='text-white'>Dashboard</p> */}
             
 
+            </div>
+            </div>
+            <div className='flex justify-start items-center cursor-pointer text-slate-900 pl-16 py-2 w-[20vw]'>
+                <FiSend className='mr-3 text-lg'/>
+                <p className=' text-[0.875rem]'>Log Out</p>
             </div>
         </section>
     )
