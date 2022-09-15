@@ -10,7 +10,7 @@ function Engagements(){
     const [doctors, setDoctors] =useState(doctor)
     return(
         <section className="mx-5 mt-5 flex justify-between items-start">
-        <div className='w-[48vw] h-[60vh]'>
+        <div className='w-[48vw] h-[70vh]'>
             <div className="w-[48vw] bg-white rounded-2xl p-3 ">
             <div className=''>
             <h1 className=' mb-1'>Account Engagements</h1>
@@ -40,27 +40,27 @@ function Engagements(){
                     </div>
                     
                 </div>
-                <div className='w-[13vw] h-[18vh] bg-purple-100 rounded-xl text-center flex flex-col justify-between items-center p-1'>
+                <div className='w-[13vw] h-[27vh] py-5 bg-purple-100 rounded-xl text-center flex flex-col justify-between items-center p-1'>
                     <div className='bg-gray-200 w-[40px] h-[40px] rounded-[50%] flex justify-center items-center'>
                         <HiUsers className='text-xl'/>
                     </div>
                     <h1 className='font-bold'>90K</h1>
                     <div className='w-[45px] border-gray-300 border-b-2'></div>
                     <div>
-                    <p className='text-[0.6rem]'>2500 Users</p>
-                    <p className='text-[0.6rem]'>Dounloaded the app this month</p>
+                    <p className='text-[0.6rem] font-bold'>2500 Users</p>
+                    <p className='text-[0.6rem] font-bold'>Dounloaded the app this month</p>
                     </div>
                     
                 </div>
-                <div className='w-[13vw] h-[18vh] bg-green-100 rounded-xl text-center flex flex-col justify-between items-center p-1'>
+                <div className='w-[13vw] h-[27vh] py-5 bg-green-100 rounded-xl text-center flex flex-col justify-between items-center p-1'>
                     <div className='bg-gray-200 w-[40px] h-[40px] rounded-[50%] flex justify-center items-center'>
                         <FaRegStar className='text-xl'/>
                     </div>
                     <h1 className='font-bold'>874</h1>
                     <div className='w-[45px] border-gray-300 border-b-2'></div>
                     <div>
-                    <p className='text-[0.6rem]'>Account Ranked</p>
-                    <p className='text-[0.6rem]'>You are in top 80%</p>
+                    <p className='text-[0.6rem] font-bold'>Account Ranked</p>
+                    <p className='text-[0.6rem] font-bold'>You are in top 80%</p>
                     </div>
                     
                     
@@ -72,14 +72,18 @@ function Engagements(){
 
             </div>
             <div className="w-[25vw] bg-white  rounded-2xl px-3 py-2">
-            <div className=''>
+            <div className='border-b-[1px] border-gray-300 mb-6'>
             <h1>Status Overview</h1>
             </div>
             <div>
-            <div className='flex justify-center items-center'>
-            <DouChart/>
+            <div className=' flex justify-center items-center'>
+            <DouChart />
             </div>
-            <div className='flex justify-center items-center'>
+            <div className='flex flex-col justify-center items-center fixed top-[22.5rem] text-sm right-[11rem]'>
+                <div>100%</div>
+                <div>Overall</div>
+            </div>
+            <div className='flex justify-center items-center mb-5 mt-2'>
             <div>
                 <div className='my-2 flex justify-between w-[20vw] items-center'>
                 <div className='flex justify-start items-center'>

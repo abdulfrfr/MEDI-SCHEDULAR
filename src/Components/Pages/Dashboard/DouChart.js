@@ -7,7 +7,7 @@ import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const options = {
-  cutout:70,
+  cutout:50,
   responsive: true,
   plugins: {
     legend: {
@@ -41,7 +41,7 @@ const data = {
 
  function BarChart() {
   return (
-  <div className='w-[15rem] flex justify-center items-center'>
+  <div className='w-[12rem] flex justify-center items-center'>
     <Doughnut  data={data} options={options}/>
   </div>
   );
