@@ -11,7 +11,7 @@ function Engagements(){
     return(
         <section className="mx-5 mt-5 flex justify-between items-start">
         <div className='w-[48vw] h-[60vh]'>
-            <div className="w-[48vw] bg-white h-[37vh] rounded-2xl p-3 ">
+            <div className="w-[48vw] bg-white rounded-2xl p-3 ">
             <div className='object-cover'>
             <h1 className=' mb-1'>Account Engagements</h1>
                 
