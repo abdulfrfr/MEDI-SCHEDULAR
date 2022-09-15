@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import NavItems from './NavItems'
 import Logo from '../Logo'
 import {FiSend} from 'react-icons/fi'
+import {Link} from 'react-router-dom'
 
 function SideNav({setText, page, setPage}){
     const [getId, setGetId] = useState('')
@@ -55,10 +56,13 @@ function SideNav({setText, page, setPage}){
 
             </div>
             </div>
+            <Link to='/'>
             <div className='flex justify-start items-center cursor-pointer text-slate-900 pl-16 py-2 w-[20vw]'>
                 <FiSend className='mr-3 text-lg'/>
                 <p className=' text-[0.875rem]'>Log Out</p>
             </div>
+            </Link>
+
         </section>
     )
 }
