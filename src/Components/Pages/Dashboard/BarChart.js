@@ -22,9 +22,7 @@ ChartJS.register(
 
 const options = {
   responsive: true,
-  grid:{
-    show:false
-  },
+  
   plugins: {
     legend: {
       display:false
@@ -33,7 +31,7 @@ const options = {
       display: false
     },
   },
-  cartegoryPercentage:1,
+  barPercentage: 0.1,
   scales: {
     xAxis:{
       grid: {
@@ -49,22 +47,20 @@ const data = {
   labels,
   datasets: [
     {
-      label: 'Losses',
+
       data: [10, 30, 25, 12, 15, 8, 35, 25, 40],
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
       borderColor:'white',
-      borderWidth:2,
       borderRadius: 10,
-      barThickness: 20
+      barThickness: 10
     },
     {
-      label: 'Gains',
+
       data: [25, 79, 30, 12, 10, 35, 55, 60, 80],
       backgroundColor:'rgba(53, 162, 235, 0.5)',
       borderColor:'white',
-      borderWidth:2,
       borderRadius: 10,
-      barThickness: 20
+      barThickness: 10
       
     },
   ],
