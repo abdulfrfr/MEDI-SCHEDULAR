@@ -6,9 +6,9 @@ function Menu(){
     
     return(
         <section>
-            <div className=" mx-7 flex justify-between items-center">
+            <div className=" mx-3 flex justify-between items-center">
         {items.map((item, index)=>(
-            <div className="w-[15vw] h-[22vh] bg-white rounded-xl px-3 py-5 flex flex-col justify-between">
+            <div className="w-[18vw] h-[20vh] bg-white rounded-xl px-3 py-5 flex flex-col justify-between">
                 <div>
                 <item.icon className={`${item.styles}`}/>
                 <p className="w-[10vw] text-xs">{item.text}</p>

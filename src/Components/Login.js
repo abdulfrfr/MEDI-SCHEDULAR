@@ -16,8 +16,8 @@ function Login(){
         <hr className='w-[200px] mt-5'/>
         <h3 className='mt-5 font-bold text-xl'>Admin Login</h3>
         <div>
-            <input type='text' className='outline-none border-2 border-gray-200 rounded-lg w-full mt-5 px-2 py-2 text-sm'/>
-            <input type='password' className='outline-none border-2 border-gray-200 rounded-lg w-full mt-5 px-2 py-2 text-sm'/>
+            <input type='text' placeholder='Email' className='outline-none border-2 border-gray-200 rounded-lg w-full mt-5 px-2 py-2 text-sm'/>
+            <input type='password' placeholder='Password' className='outline-none border-2 border-gray-200 rounded-lg w-full mt-5 px-2 py-2 text-sm'/>
 
         </div>
 

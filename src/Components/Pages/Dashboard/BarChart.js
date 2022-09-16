@@ -20,37 +20,51 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
+const options = {
   responsive: true,
+  grid:{
+    show:false
+  },
   plugins: {
     legend: {
-      position: 'top',
+      display:false
     },
     title: {
-      display: false,
-      text: '',
+      display: false
     },
   },
-};
+  cartegoryPercentage:1,
+  scales: {
+    xAxis:{
+      grid: {
+        display: false
+      }
+    }
+    
+}};
 
-const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
+const labels = ['Jan', 'Feb',  'Mar',  'Apr',  'May', 'Jun', 'Jul', 'Aug', 'Sep'];
 
-export const data = {
+const data = {
   labels,
   datasets: [
     {
       label: 'Losses',
-      data: [10, 30, 25, 12, 15, 8, 35, 45, 11],
+      data: [10, 30, 25, 12, 15, 8, 35, 25, 40],
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      borderColor:'rgba(255, 99, 132, 0.5)',
-      borderRadius: 10
+      borderColor:'white',
+      borderWidth:2,
+      borderRadius: 10,
+      barThickness: 20
     },
     {
       label: 'Gains',
-      data: [25, 79, 30, 12, 10, 35, 55, 50, 10],
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      borderColor:'rgba(53, 162, 235, 0.5)',
-      borderRadius: 10
+      data: [25, 79, 30, 12, 10, 35, 55, 60, 80],
+      backgroundColor:'rgba(53, 162, 235, 0.5)',
+      borderColor:'white',
+      borderWidth:2,
+      borderRadius: 10,
+      barThickness: 20
       
     },
   ],
@@ -58,8 +72,8 @@ export const data = {
 
  function BarChart() {
   return (
-  <div className='w-[28rem]'>
-    <Bar options={options} data={data} />
+  <div className=' '>
+    <Bar  data={data} width={8} height={3} options={options}/>
   </div>
   );
 }
