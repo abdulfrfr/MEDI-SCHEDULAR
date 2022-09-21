@@ -2,25 +2,50 @@ import {useEffect, useState} from 'react'
 import {FiFilter} from 'react-icons/fi'
 import {BsBoxArrowInDown} from 'react-icons/bs'
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
-import Users from './UserItems'
+import Users, {move} from './UserItems'
 
 function UserManagement(){
     const [user, setUser] = useState([])
+    const [moves, setMoves] = useState(move)
+    const [getMove, setGetMove] = useState()
+    const [res1, setRes1] = useState(0)
+    const [res2, setRes2] = useState(0)
+
+    
+
+    const first_move = moves.slice(0, 2)
+    const sec_move = moves.slice(8, 10)
+
+    
+
+
     
     
     
     useEffect(()=>{
         const user1 = Users.slice(0,5)
         setUser(user1)
+
+        setGetMove(0)
+
+        
     },[])
 
-    function firstUsers(){
-        const user1 = Users.slice(0,5)
-        setUser(user1)
+    function getUsers(id){
+        if(id === 0){
+            setUser(Users.slice(0,5))
+        }else if(id === 1){
+            setUser(Users.slice(5, 10))
+        }
+        
+        
     }
-    function secondUsers(){
-        const user2 = Users.slice(5,10)
-        setUser(user2)
+    
+
+    function getID(id){
+        setGetMove(id)
+        getUsers(id)
+
     }
 
     return(
@@ -114,8 +139,9 @@ function UserManagement(){
 
             <div className='flex justify-center items- p-4'>
                 <div className='border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowBack/></div>
-                <div onClick={firstUsers} className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'>1</div>
-                <div onClick={secondUsers} className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'>2</div>
+                {first_move.map((move, index)=>
+                    <div onClick={()=> getID(index)} index={index} className={index === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move.num}</div>
+                )}
                 <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'>
                     <div className='flex justify-center items-center'>
                         <div className='mr-[2px] w-1 h-1 rounded-[50%] bg-gray-400'></div>
@@ -123,8 +149,9 @@ function UserManagement(){
                         <div className='mr-[2px] w-1 h-1 rounded-[50%] bg-gray-400'></div>
                     </div>
                 </div>
-                <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'>9</div>
-                <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'>10</div>
+                {sec_move.map((move, index)=>
+                    <div onClick={()=> getID(index)} index={index} className={index === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move.num}</div>
+                )}
                 <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowForward/></div>
             </div>
             </div>
