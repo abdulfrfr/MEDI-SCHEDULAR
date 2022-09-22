@@ -6,15 +6,13 @@ import Users, {move} from './UserItems'
 
 function UserManagement(){
     const [user, setUser] = useState([])
-    const [moves, setMoves] = useState(move)
+    const [idx, setIdx] = useState()
     const [getMove, setGetMove] = useState()
     const [res1, setRes1] = useState(0)
     const [res2, setRes2] = useState(0)
 
     
 
-    const first_move = moves.slice(0, 2)
-    const sec_move = moves.slice(8, 10)
 
     
 
@@ -27,6 +25,7 @@ function UserManagement(){
         setUser(user1)
 
         setGetMove(0)
+        setIdx(0)
 
         
     },[])
@@ -139,9 +138,10 @@ function UserManagement(){
 
             <div className='flex justify-center items- p-4'>
                 <div className='border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowBack/></div>
-                {first_move.map((move, index)=>
-                    <div onClick={()=> getID(index)} index={index} className={index === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move.num}</div>
-                )}
+                
+                <div onClick={()=> getID(move[0].id)} className={move[0].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[0].num}</div>
+                <div onClick={()=> getID(move[1].id)} className={move[1].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[1].num}</div>
+                
                 <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'>
                     <div className='flex justify-center items-center'>
                         <div className='mr-[2px] w-1 h-1 rounded-[50%] bg-gray-400'></div>
@@ -149,9 +149,10 @@ function UserManagement(){
                         <div className='mr-[2px] w-1 h-1 rounded-[50%] bg-gray-400'></div>
                     </div>
                 </div>
-                {sec_move.map((move, index)=>
-                    <div onClick={()=> getID(index)} index={index} className={index === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move.num}</div>
-                )}
+            
+                    <div onClick={()=> getID(move[8].id)}  className={move[8].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[8].num}</div>
+                    <div onClick={()=> getID(move[9].id)}  className={move[9].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[9].num}</div>
+                
                 <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowForward/></div>
             </div>
             </div>
