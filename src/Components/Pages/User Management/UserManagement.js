@@ -6,7 +6,12 @@ import Users, {move} from './UserItems'
 
 function UserManagement(){
     const [user, setUser] = useState([])
-    const [idx, setIdx] = useState()
+    const [indx, setIndx] = useState({
+        one: 0,
+        two: 1,
+        six: 5,
+        seven: 6
+    })
     const [getMove, setGetMove] = useState()
     const [res1, setRes1] = useState(0)
     const [res2, setRes2] = useState(0)
@@ -25,18 +30,18 @@ function UserManagement(){
         setUser(user1)
 
         setGetMove(0)
-        setIdx(0)
+        
 
         
     },[])
 
+
+   
+
     function getUsers(id){
-        if(id === 0){
-            setUser(Users.slice(0,5))
-        }else if(id === 1){
-            setUser(Users.slice(5, 10))
-        }
-        
+        const mul_id = id * 5
+        const mul_add = mul_id + 5
+            setUser(Users.slice(mul_id,mul_add))
         
     }
     
@@ -139,8 +144,8 @@ function UserManagement(){
             <div className='flex justify-center items- p-4'>
                 <div className='border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowBack/></div>
                 
-                <div onClick={()=> getID(move[0].id)} className={move[0].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[0].num}</div>
-                <div onClick={()=> getID(move[1].id)} className={move[1].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[1].num}</div>
+                <div onClick={()=> getID(move[indx.one].id)} className={move[indx.one].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.one].num}</div>
+                <div onClick={()=> getID(move[indx.two].id)} className={move[indx.two].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.two].num}</div>
                 
                 <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'>
                     <div className='flex justify-center items-center'>
@@ -150,8 +155,8 @@ function UserManagement(){
                     </div>
                 </div>
             
-                    <div onClick={()=> getID(move[8].id)}  className={move[8].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[8].num}</div>
-                    <div onClick={()=> getID(move[9].id)}  className={move[9].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[9].num}</div>
+                    <div onClick={()=> getID(move[indx.six].id)}  className={move[indx.six].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.six].num}</div>
+                    <div onClick={()=> getID(move[indx.seven].id)}  className={move[indx.seven].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.seven].num}</div>
                 
                 <div className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowForward/></div>
             </div>
