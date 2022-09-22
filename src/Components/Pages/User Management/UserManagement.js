@@ -19,7 +19,34 @@ function UserManagement(){
 
     
 
-    function changeDisplay(){
+    function changeDisplayFirst(){
+
+        if(indx.six <= 5 && indx.seven <= 6){
+            setIndx(() =>{ return {
+                one: indx.one - 1 ,
+                two: indx.two - 1,
+                six: 5 ,
+                seven: 6
+        }})
+
+        if(indx.one <= 1){
+            setShow(false)
+        } else{
+            setShow(true)
+        }
+        
+        } else {
+            setIndx(() =>{ return {
+                one: indx.one ,
+                two: indx.two ,
+                six: indx.six -1 ,
+                seven: indx.seven -1
+        }})
+        }
+        
+
+    }
+    function changeDisplaySecond(){
 
         if(indx.two >= 4 && indx.one >= 3){
             setIndx(() =>{ return {
@@ -28,6 +55,8 @@ function UserManagement(){
                 six: indx.six + 1 ,
                 seven: indx.seven + 1
         }})
+
+        setGetMove(indx.two)
 
         if(indx.seven >= 8){
             setShow(true)
@@ -42,7 +71,10 @@ function UserManagement(){
                 six: indx.six ,
                 seven: indx.seven
         }})
+        setGetMove(indx.one)
+        
         }
+        
         
 
     }
@@ -172,7 +204,7 @@ function UserManagement(){
             
 
             <div className='flex justify-center items- p-4'>
-                <div className={show ? 'border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'hidden'}><IoIosArrowBack/></div>
+                <div onClick={changeDisplayFirst} className={show ? 'border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'hidden'}><IoIosArrowBack/></div>
                 
                 <div onClick={()=> getID(move[indx.one].id)} className={move[indx.one].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.one].num}</div>
                 <div onClick={()=> getID(move[indx.two].id)} className={move[indx.two].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.two].num}</div>
@@ -188,7 +220,7 @@ function UserManagement(){
                     <div onClick={()=> getID(move[indx.six].id)}  className={move[indx.six].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.six].num}</div>
                     <div onClick={()=> getID(move[indx.seven].id)}  className={move[indx.seven].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.seven].num}</div>
                 
-                <div onClick={changeDisplay} className={show ? 'hidden' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}><IoIosArrowForward /></div>
+                <div onClick={changeDisplaySecond} className={show ? 'hidden' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}><IoIosArrowForward /></div>
             </div>
             </div>
         </section>
