@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import {FiFilter} from 'react-icons/fi'
 import {BsBoxArrowInDown} from 'react-icons/bs'
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
-import Users, {move} from './UserItems'
+import Users, {move, colors} from './UserItems'
 
 function UserManagement(){
     const [user, setUser] = useState([])
@@ -19,7 +19,7 @@ function UserManagement(){
     
 // when the left arrow is clicked
     function changeDisplayFirst(){
-        if(indx.two === 7){
+        if(getMove === 6){
             setShow(false)
         }else {
             console.log('okay!');
@@ -33,7 +33,18 @@ function UserManagement(){
                     seven: 9
                 
             }})
-        } else {
+        } else if (getMove >= 7){
+            setIndx(()=>{return {
+                
+                one: 6,
+                two: 7,
+                six: 8,
+                seven: 9
+            
+        }})
+        }
+        else {
+            
             setIndx(()=>{return {
                 
                 one: indx.one--,
@@ -42,14 +53,29 @@ function UserManagement(){
                 seven: 9
             
         }})
-        setGetMove(getMove - 1)
+
+        if(indx.two === 7 && indx.six === 8){
+            if(getMove === 8){
+                setGetMove(6)
+            } else{
+                console.log('confused');
+            }
+            
+        } else{
+            console.log('sigh');
+        }
+        
         }
         if(getMove === 0){
             setGetMove(0)
+            getUsers(0)
         } else {
             setGetMove(()=> getMove - 1)
+            getUsers(getMove - 1)
         }
 
+        
+        
     }
 
 
@@ -78,14 +104,19 @@ function UserManagement(){
                 six: 8,
                 seven: 9
             
-        }})        
+        }})   
+             
         }
 
         if(getMove === 9){
             setGetMove(9)
+            getUsers(9)
         } else {
             setGetMove(()=> getMove + 1)
+            getUsers(getMove + 1)
         }
+        
+        
         
     }
     
@@ -157,23 +188,23 @@ function UserManagement(){
 
 
             <div className='w-[75vw] mx-4 rounded-lg bg-white'>
-            <div className='flex justify-between items-center border-b-[1px] border-gray-300 px-4 py-0'>
-                <div className=' w-[20vw] px-5 py-2 flex justify-between items-center'>
+            <div className='flex justify-between items-start border-b-[1px] border-gray-300 px-4 py-0 w-[75vw]'>
+                <div className=' w-[17vw] px-0 py-2 flex justify-between items-start translate-x-2'>
                 <p>User ID</p>
                 <p>User</p>
                 
                 </div> 
 
 
-                <div className='flex justify-between items-center w-[40vw] text-sm'>
-                <div className='w-[10vw] px-5 py-2'>
+                <div className='flex justify-between items-start w-[42vw] text-sm -translate-x-10'>
+                <div className='w-[10vw] px-0 py-2 translate-x-1'>
                     <p>User Type</p>
                 </div>
                 
 
 
                 <div>
-                <div className='flex justify-between items-center w-[30vw] px-5 py-2'>
+                <div className='flex justify-between items-start w-[30vw] px-0 py-2 '>
                     <p>Service Request</p>
                     <p>Appointments</p>
                     <p>Status</p>
@@ -187,20 +218,20 @@ function UserManagement(){
                 {user.map((user, index)=>(
                     <div className='border-b-[1px] border-gray-300'>
                     <div className='flex justify-between items-center px-5 py-4 text-sm h-[9.5vh]'>
-                        <div className='flex justify-start items-center w-[30vw] '>
-                            <div>{user.ID}</div>
-                            <div className='flex flex-col justify-center items-start ml-32'>
+                        <div className='flex justify-start items-center w-[23vw] '>
+                            <div className='w-[5rem]'>{user.ID}</div>
+                            <div className='flex flex-col justify-center items-start translate-x-[7rem]'>
                                 <div>{user.user}</div>
                                 <div>{user.email}</div>
                             </div>
                         </div>
-                        <div className='w-[10vw] flex justify-start items-start ml-16'>
-                            <div className='text-left'>{user.user_type}</div>
+                        <div className='w-[10vw] flex justify-start items-start'>
+                            <div className='flex justify-center items-center w-[5vw]'>{user.user_type}</div>
                         </div>
-                        <div className='flex justify-between items-center w-[30vw] text-left'>
-                            <div className='flex justify-start items-start overflow-hidden w-[5vw]'>{user.service}</div>
-                            <div className='flex justify-start items-start overflow-hidden w-[5vw]'>{user.appointment}</div>
-                            <div className='flex justify-start items-start overflow-hidden w-[5vw]'>{user.status}</div>
+                        <div className='flex justify-between items-center w-[30vw] text-center'>
+                            <div className='flex justify-center items-center overflow-hidden w-[5vw] -translate-x-7'>{user.service}</div>
+                            <div className='flex justify-center items-center overflow-hidden w-[5vw] -translate-x-4'>{user.appointment}</div>
+                            <div className={user.status === 'Active'? `${colors[0].green}` : user.status === 'Pending' ? `${colors[2].yellow}` : `${colors[1].red}`}>{user.status}</div>
                         </div>
                     </div>
                     
