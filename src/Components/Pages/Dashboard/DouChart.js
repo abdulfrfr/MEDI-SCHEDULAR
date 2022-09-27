@@ -7,7 +7,7 @@ import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const options = {
-  cutout:50,
+  cutout:60,
   responsive: true,
   plugins: {
     legend: {
