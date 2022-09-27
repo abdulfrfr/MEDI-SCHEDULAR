@@ -6,7 +6,7 @@ import {MdOutlineDirectionsWalk} from 'react-icons/md';
 import Dashboard from '../Pages/Dashboard/Dashboard'
 import Messages from '../Pages/Messages/Messages'
 import UserManagement from '../Pages/User Management/UserManagement'
-import Services from '../Pages/Services'
+import Services from '../Pages/Services/Services'
 import Doctors from '../Pages/Doctors'
 import Appointments from '../Pages/Appointments'
 import Settings from '../Pages/Settings'
