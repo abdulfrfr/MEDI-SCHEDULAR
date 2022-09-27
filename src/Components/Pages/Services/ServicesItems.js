@@ -9,98 +9,105 @@ export const ServItems = [
         dis:'Discussion',
         disNum:18,
         range:'56% Completed',
-        rangeVal:'56%'
+        rangeVal:'56',
+        color: 'red'
 
     },
     {
         Key:2,
         guide:'Guide',
-        status:'Emergency',
-        due:'Due in 4 days',
+        status:'Preventive',
+        due:'Cancled',
         tasks:'Tasks',
         tasksNum:29,
         dis:'Discussion',
         disNum:18,
-        range:'56% Completed',
-        rangeVal:'56%'
+        range:'Cancled',
+        rangeVal:'56',
+        color: 'red'
 
     },
     {
         Key:3,
         guide:'Guide',
-        status:'Emergency',
-        due:'Due in 4 days',
+        status:'Rehabilitation',
+        due:'Completed',
         tasks:'Tasks',
         tasksNum:29,
         dis:'Discussion',
         disNum:18,
-        range:'56% Completed',
-        rangeVal:'56%'
+        range:'100% Completed',
+        rangeVal:'100',
+        color: 'green'
 
     },
     {
         Key:4,
         guide:'Guide',
-        status:'Emergency',
-        due:'Due in 4 days',
+        status:'Long-Term',
+        due:'Pending',
         tasks:'Tasks',
         tasksNum:29,
         dis:'Discussion',
         disNum:18,
-        range:'56% Completed',
-        rangeVal:'56%'
+        range:'0% Pending',
+        rangeVal:'5',
+        color: 'yellow'
 
     },
     {
         Key:5,
         guide:'Guide',
-        status:'Emergency',
-        due:'Due in 4 days',
+        status:'Hospital',
+        due:'Cancled',
         tasks:'Tasks',
-        tasksNum:29,
+        tasksNum:50,
         dis:'Discussion',
-        disNum:18,
-        range:'56% Completed',
-        rangeVal:'56%'
+        disNum:33,
+        range:'Cancled',
+        rangeVal:'15',
+        color: 'red'
 
     },
     {
         Key:6,
         guide:'Guide',
-        status:'Emergency',
-        due:'Due in 4 days',
+        status:'Diagnostic',
+        due:'Due in 1 days',
         tasks:'Tasks',
-        tasksNum:29,
+        tasksNum:9,
         dis:'Discussion',
-        disNum:18,
-        range:'56% Completed',
-        rangeVal:'56%'
+        disNum:8,
+        range:'88% Completed',
+        rangeVal:'88',
+        color: 'green'
 
     },
     {
         Key:7,
         guide:'Guide',
-        status:'Emergency',
-        due:'Due in 4 days',
+        status:'Primary',
+        due:'Pending',
         tasks:'Tasks',
         tasksNum:29,
         dis:'Discussion',
         disNum:18,
-        range:'56% Completed',
-        rangeVal:'56%'
+        range:'0% Pending',
+        rangeVal:'5'
 
     },
     {
         Key:8,
         guide:'Guide',
-        status:'Emergency',
-        due:'Due in 4 days',
+        status:'Home Care',
+        due:'Completed',
         tasks:'Tasks',
         tasksNum:29,
         dis:'Discussion',
         disNum:18,
-        range:'56% Completed',
-        rangeVal:'56%'
+        range:'100% Completed',
+        rangeVal:'100',
+        color: 'green'
 
     },
 ]

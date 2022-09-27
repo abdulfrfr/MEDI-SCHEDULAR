@@ -25,6 +25,7 @@ body{
   }
   
  .red::-webkit-slider-runnable-track {
+    width:auto;
     height: 10px;
     -webkit-appearance: none;
     color: red;
@@ -70,13 +71,14 @@ body{
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .green {
     overflow: hidden;
-    width: 15vw;
+    width: 13vw;
     -webkit-appearance: none;
     background-color: #aaaaaa;
     border-radius: 10px
   }
   
  .green::-webkit-slider-runnable-track {
+    width: 15vw;
     height: 10px;
     -webkit-appearance: none;
     color: green;
