@@ -187,7 +187,7 @@ function UserManagement(){
             </div>
 
 
-            <div className='w-[75vw] mx-4 rounded-lg bg-white'>
+            <div className='w-[75vw] h-[70vh] mx-4 rounded-lg bg-white'>
             <div className='flex justify-between items-start border-b-[1px] border-gray-300 px-4 py-0 w-[75vw]'>
                 <div className=' w-[17vw] px-0 py-2 flex justify-between items-start translate-x-2'>
                 <p>User ID</p>
@@ -216,7 +216,7 @@ function UserManagement(){
 
             <div>
                 {user.map((user, index)=>(
-                    <div className='border-b-[1px] border-gray-300'>
+                    <div className='border-b-[1px] py-1 border-gray-300'>
                     <div className='flex justify-between items-center px-5 py-4 text-sm h-[9.5vh]'>
                         <div className='flex justify-start items-center w-[23vw] '>
                             <div className='w-[5rem]'>{user.ID}</div>
@@ -239,8 +239,8 @@ function UserManagement(){
 
                 ))}
             </div>
-            
 
+            <div className='flex justify-center items-center h-[10vh]'>
             <div className='flex justify-center items- p-4'>
                 <div onClick={changeDisplayFirst} className='border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowBack/></div>
                 
@@ -259,6 +259,7 @@ function UserManagement(){
                     <div onClick={()=> getID(move[indx.seven].id)}  className={move[indx.seven].id === getMove ?'cursor-pointer border-[1px] border-red-500 bg-red-500 text-white rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2' : 'cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'}>{move[indx.seven].num}</div>
                 
                 <div onClick={changeDisplaySecond} className='cursor-pointer border-[1px] border-gray-300 rounded-[50%] p-2 w-9 h-9 flex justify-center items-center mr-2'><IoIosArrowForward /></div>
+            </div>
             </div>
             </div>
         </section>

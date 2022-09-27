@@ -22,7 +22,7 @@ function SideNav({setText, page, setPage}){
     useEffect(()=>{
         setPage(items.filter((item, index)=> index === 0))
         
-    }, [])
+    }, [items])
 
 
 
