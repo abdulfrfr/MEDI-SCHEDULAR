@@ -14,24 +14,83 @@ body{
   
 }
 
-.stats {
-  margin: 1.5625rem 0;
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 50%;
-  border: 1.5625rem solid transparent;
-  background-size: 100% 100%, 50% 50%, 50% 50%, 40% 40%, 60% 60%;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(white, white), 
-                    linear-gradient(-40deg, #02BF02 36%, #02BF02  30%),
-                    linear-gradient(120deg, #FFB733 36%, #FFB733 30%),
-                    linear-gradient(210deg, rgb(0, 158, 250) 20%, rgb(0, 158, 250) 14%),
-                    linear-gradient(300deg, #FFB733 36%, #FFB733 30%);
-                    
-  background-position: center center, left top, right top, left bottom, right bottom;
-  background-origin: content-box, border-box, border-box, border-box, border-box;
-  background-clip: content-box, border-box, border-box, border-box, border-box;
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .red {
+    overflow: hidden;
+    width: 15vw;
+    -webkit-appearance: none;
+    background-color: #aaaaaa;
+    border-radius: 10px
+  }
   
+ .red::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: red;
+    margin-top: -1px;
+  }
+  
+  .red::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: none;
+    box-shadow: -80px 0 0 80px red;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .yellow {
+    overflow: hidden;
+    width: 15vw;
+    -webkit-appearance: none;
+    background-color: #aaaaaa;
+    border-radius: 10px
+  }
+  
+ .yellow::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: yellow;
+    margin-top: -1px;
+  }
+  
+  .yellow::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: none;
+    box-shadow: -80px 0 0 80px yellow;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .green {
+    overflow: hidden;
+    width: 15vw;
+    -webkit-appearance: none;
+    background-color: #aaaaaa;
+    border-radius: 10px
+  }
+  
+ .green::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: green;
+    margin-top: -1px;
+  }
+  
+  .green::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: none;
+    box-shadow: -80px 0 0 80px green;
+  }
 }
 
 
