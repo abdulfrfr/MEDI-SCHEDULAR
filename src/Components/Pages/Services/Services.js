@@ -229,7 +229,7 @@ function Services(){
                         </div>
                         <div className='px-2 py-2'>
                             <div className='text-xs text-gray-400'>{user.range}</div>
-                            <input min='0' max='100'  className={user.color === 'red'? 'red' : user.color === 'green' ? 'green' : 'yellow'} type="range"  name="vol" value={user.rangeVal} readOnly='true'/>
+                            <input min='0' max='100'  className={user.color === 'red'? 'red' : user.color === 'green' ? 'green' : 'yellow '} type="range"  name="vol" value={user.rangeVal} readOnly='true'/>
                         </div>
                     </div>
 

@@ -71,7 +71,7 @@ body{
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .green {
     overflow: hidden;
-    width: 13vw;
+    width: 15vw;
     -webkit-appearance: none;
     background-color: #aaaaaa;
     border-radius: 10px

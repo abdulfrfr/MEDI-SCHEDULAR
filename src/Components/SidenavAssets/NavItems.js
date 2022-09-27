@@ -9,7 +9,7 @@ import UserManagement from '../Pages/User Management/UserManagement'
 import Services from '../Pages/Services/Services'
 import Doctors from '../Pages/Doctors'
 import Appointments from '../Pages/Appointments'
-import Settings from '../Pages/Settings'
+import Settings from '../Pages/Settings/Settings'
 
 
 const NavItems = [
