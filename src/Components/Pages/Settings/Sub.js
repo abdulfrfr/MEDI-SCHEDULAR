@@ -1,5 +1,9 @@
 import {SubItems} from './SubItems'
-import {BsFillCheckCircleFill} from 'react-icons/bs'
+import {BsFillCheckCircleFill, BsDashCircleFill} from 'react-icons/bs'
+import {IoMdAddCircle} from 'react-icons/io'
+import {GoArrowRight} from 'react-icons/go'
+import master from './Mastercard-logo.svg.png'
+import visa from './Visa_Inc._logo.svg.png'
 
 function Sub(){
     return(
@@ -8,7 +12,7 @@ function Sub(){
             <div className="text-sm">Plan</div>
             <div className="flex justify-between items-center mt-3 w-[55vw]">
                 <div className="border-2 border-blue-400 bg-blue-100 w-[26vw] rounded-md h-[18vh] px-4 py-2">
-                    <div className='flex justify-end items-end -mt-4 -mr-5'><BsFillCheckCircleFill className='text-blue-500'/></div>
+                    <div className='flex justify-end items-end -mt-4 -mr-[1.4rem] decoration-solid '><BsFillCheckCircleFill className='text-blue-500 text-lg rounded-[50%] bg-white'/></div>
                     <div className="flex justify-between items-start">
                         <div className="flex flex-col justify-center items-start">
                             <div className="text-sm font-bold">Beginner</div>
@@ -52,9 +56,42 @@ function Sub(){
             <div className="mt-3">
                 <div className="mb-2 text-sm font-bold">Payment Method</div>
                 <div className="flex justify-between items-center w-[45vw]">
-                    <div className="w-[14vw] h-[14vh] bg-blue-100 rounded-lg border-[1px] border-blue-400"></div>
-                    <div className="w-[14vw] h-[14vh] bg-white rounded-lg border-[1px]  border-blue-400"></div>
-                    <div className="w-[14vw] h-[14vh] bg-gray-300 border-[1px] border-gray-300 rounded-lg "></div>
+                    <div className="w-[14vw] h-[14vh] bg-blue-100 rounded-lg border-[1px] border-blue-400 p-2">
+                    <div className='flex justify-end items-end -mt-4 -mr-4 decoration-solid '><BsFillCheckCircleFill className='text-blue-500 text-lg rounded-[50%] bg-white'/></div>
+                        <div className='text-xs'><p>Credit Card</p></div>
+                        <div className='flex justify-start items-center mt-2'>
+                            <div>
+                                <img src={master} alt='mastercard' className='w-7 mr-2'/>
+                            </div>
+                            <div className='flex justify-between items-start w-[8vw] text-xs'>
+                                <div>****</div>
+                                <div>****</div>
+                                <div>****</div>
+                                <div>3456</div>
+                            </div>
+                        </div>
+
+                        <div className='flex justify-end items-end'><BsDashCircleFill className='text-gray-400 text-lg mt-1'/></div>
+                    </div>
+                    <div className="w-[14vw] h-[14vh] bg-white rounded-lg border-[1px]  border-blue-400 p-2">
+                    <div className='text-xs'><p>Debit Card</p></div>
+                        <div className='flex justify-start items-center mt-2'>
+                            <div>
+                                <img src={visa} alt='mastercard' className='w-7 mr-2'/>
+                            </div>
+                            <div className='flex justify-between items-start w-[8vw] text-xs'>
+                                <div>****</div>
+                                <div>****</div>
+                                <div>****</div>
+                                <div>3456</div>
+                            </div>
+                        </div>
+
+                        <div className='flex justify-end items-end'><BsDashCircleFill className='text-gray-400 text-lg mt-1'/></div>
+                    </div>
+                    <div className=" flex justify-center items-center w-[14vw] h-[14vh] bg-gray-300 border-[1px] border-gray-300 rounded-lg ">
+                        <div><IoMdAddCircle className='text-gray-400 text-5xl'/></div>
+                    </div>
                 </div>
             </div>
 
