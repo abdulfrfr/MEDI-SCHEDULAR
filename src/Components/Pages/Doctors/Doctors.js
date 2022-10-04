@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
-import NextPages from '../NextPages'
+import NextPages from '../../NextPages'
 import {FiFilter} from 'react-icons/fi'
 import {BsBoxArrowInDown} from 'react-icons/bs'
-import {ServItems, move} from './Services/ServicesItems'
+import {move} from '../Services/ServicesItems'
+import DocItems, {headers} from './DocItems'
+
 
 function Doctors(){
     const [indx, setIndx] = useState({
@@ -12,8 +14,6 @@ function Doctors(){
         seven: 9
     })
     const [getMove, setGetMove] = useState(0)
-    const [isShow, setIsShow] = useState(true)
-    const [is_Show, setIs_Show] = useState(true)
     const [user, setUser] = useState([])
     const [show, setShow] = useState(false)
     
@@ -122,9 +122,16 @@ function Doctors(){
     function getUsers(id){
         const mul_id = id * 8
         const mul_add = mul_id + 8
-            setUser(ServItems.slice(mul_id,mul_add))
+            setUser(DocItems.slice(mul_id,mul_add))
         
     }
+
+    useEffect(()=>{
+        const user1 = DocItems.slice(0,8)
+        setUser(user1)
+
+        
+    },[DocItems])
     
 
     function getID(id){
@@ -159,8 +166,36 @@ function Doctors(){
             </div>
 
             <div className='mt-3'>
-                <div className='w-[78vw] h-[70vh] bg-white rounded-md'>
+                <div className='w-[78vw] h-[72vh] bg-white rounded-md px-3 py-1'>
+                <div>
+                    { headers.map((header, index)=>(
+                            <div className='flex justify-between items-center w-[75vw] text-sm border-b-[1px] border-gray-300 pb-2'>
+                                <div className='flex justify-start items-start w-[11vw]'>{header.name}</div>
+                                <div className='flex justify-start items-start w-[11vw]'>{header.email}</div>
+                                <div className='flex justify-center items-center w-[11vw]'>{header.roles}</div>
+                                <div className='flex justify-center items-center w-[11vw]'>{header.medicareID}</div>
+                                <div className='flex justify-center items-center w-[11vw]'>{header.phone}</div>
+                                <div className='flex justify-start pl-2 items-center w-[11vw]'>{header.joinedDate}</div>
+                                <div className='flex justify-center items-center w-[11vw]'>{header.status}</div>
+                            </div>
+                        ))
+                    }
+                </div>
 
+
+                <div>
+                {user.map((user, index)=>(
+                    <div className='py-3 flex justify-between items-center w-[75vw] text-sm border-b-[1px] border-gray-300'>
+                                <div className='flex justify-start items-start w-[11vw]'>{user.name}</div>
+                                <div className='flex justify-start items-start w-[11vw]'>{user.email}</div>
+                                <div className='flex justify-center items-center w-[11vw]'>{user.roles}</div>
+                                <div className='flex justify-center items-center w-[11vw]'>{user.medicareID}</div>
+                                <div className='flex justify-center items-center w-[11vw]'>{user.phone}</div>
+                                <div className='flex justify-center items-baseline w-[11vw]'>{user.joinedDate} <div className='text-xs text-gray-400'>{user.time}</div></div>
+                                <div className='flex justify-center items-center w-[11vw]'><div className='bg-green-500 text-white rounded-2xl px-3'>{user.status}</div> </div>
+                            </div>
+                ))}
+                </div>
 
                 <div>
                 <NextPages
