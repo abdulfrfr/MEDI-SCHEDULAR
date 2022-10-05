@@ -72,7 +72,7 @@ function prevMonth(){
                     <div onClick={nextMonth} className='text-gray-500 bg-gray-300 p-1 rounded-md ml-1'><IoIosArrowForward/></div>
                 </div>
             </div>
-            <div className="text-white bg-red-500 px-2 py-1 rounded-lg">Today</div>
+            <div className={month !== new Date().getMonth()? 'hidden' :"text-white bg-red-500 px-2 py-1 rounded-lg"}>Today</div>
             <div className="flex justify-start items-center">
                 <div>Filter by</div>
                 <div className="ml-2 border-[1px] border-gray-400 px-5 py-1 rounded-md flex justify-between items-center">
