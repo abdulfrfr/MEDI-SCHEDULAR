@@ -27,7 +27,7 @@ const navMonth = new Date(year, month).toLocaleDateString('en-uk', {month: 'long
 const totalDaysInMonth = new Date(year, month + 1, 0).getDate()
 
 //to get the first week day in the current month
-const firstDayOfMonthString = new Date(year, month, day).toLocaleDateString('en-uk',{
+const firstDayOfMonthString = new Date(year, month, 1).toLocaleDateString('en-uk',{
     weekday: 'long',
     month: 'numeric',
     day: 'numeric',
@@ -36,7 +36,7 @@ const firstDayOfMonthString = new Date(year, month, day).toLocaleDateString('en-
 
 const firstDayIndex = weekdays.indexOf(firstDayOfMonthString.split(', ')[0])
 
-console.log(firstDayIndex);
+console.log(firstDayOfMonthString, firstDayIndex);
 //loop through to get the number of days in previous month that reflects on the week the current month starts in
 const padding = []
 const mainDays = []
@@ -52,7 +52,7 @@ for (let i = 1; i <= totalDaysInMonth; i++){
 useEffect(()=>{
     setPaddingDays(padding)
     setDays(mainDays)
-}, [padding, mainDays])
+}, [paddingDays, days])
 
 function nextMonth(){
     setCurrentMonth((prevValue)=> prevValue + 1)
