@@ -9,8 +9,13 @@ function Appointments(){
 const [days, setDays] = useState([])
 const [paddingDays, setPaddingDays] = useState([])
 const [currentDay, setCurrentDay] = useState(false)
+const [numericDate, setNumericDate] = useState('')
 const [currentMonth, setCurrentMonth] = useState(new Date().getMonth())
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+const dayEvents = [{date: '10/12/2022', text: 'theres an event today'}, {date: '10/6/2022', text: 'another event'}]
+const findEvent = (matchingDate)=> dayEvents.find((date, index)=> date.date === matchingDate)
+
 
 const dt = new Date()
 dt.setMonth(currentMonth)
@@ -37,7 +42,10 @@ const firstDayOfMonthString = new Date(year, month, 1).toLocaleDateString('en-uk
 const firstDayIndex = weekdays.indexOf(firstDayOfMonthString.split(', ')[0])
 
 console.log(firstDayOfMonthString, firstDayIndex);
-//loop through to get the number of days in previous month that reflects on the week the current month starts in
+
+
+useEffect(()=>{
+    //loop through to get the number of days in previous month that reflects on the week the current month starts in
 const padding = []
 const mainDays = []
 
@@ -45,14 +53,22 @@ for (let i = 1; i <= firstDayIndex; i++){
     padding.push(i)
 }
 for (let i = 1; i <= totalDaysInMonth; i++){
-    mainDays.push(i)
+    const present = `${month + 1}/${i}/${year}`
+    mainDays.push({
+        value: i,
+        event: findEvent(present)
+    })
     
+    console.log(findEvent(present));
 }
-
-useEffect(()=>{
     setPaddingDays(padding)
     setDays(mainDays)
-}, [paddingDays, days, mainDays, padding])
+}, [currentMonth])
+
+
+
+console.log(days);
+
 
 function nextMonth(){
     setCurrentMonth((prevValue)=> prevValue + 1)
@@ -60,6 +76,13 @@ function nextMonth(){
 function prevMonth(){
     setCurrentMonth((prevValue)=> prevValue - 1)
 }
+
+function whenDateIsClicked(val){
+setNumericDate(`${month + 1}/${val}/${year}`)
+
+
+}
+
 
     return(
         <section>
@@ -89,10 +112,13 @@ function prevMonth(){
             </div>
             <div className='grid grid-cols-7 justify-between items-center text-sm w-[72vw] m-auto '>
                 {paddingDays.map((day, index)=>(
-                    <div className='h-[15vh]'></div>
+                    <div className='h-[14vh]'></div>
                 ))}
                 {days.map((day, index)=>(
-                    <div className={day === new Date().getDate() && month === new Date().getMonth()  ? 'h-[15vh] bg-blue-200 p-3 flex justify-start items-start border-blue-400 border-[1px]':'h-[15vh] p-3 flex justify-start items-start border-gray-400 border-[1px]'}>{day}</div>
+                    <div onClick={()=>{whenDateIsClicked(day.value)}} className={day.value === new Date().getDate() && month === new Date().getMonth()  ? 'h-[14vh] box-border bg-blue-200 p-2 flex flex-col justify-between items-start border-blue-400 border-[1px]':'h-[14vh] box-border hover:bg-blue-200 p-2 flex flex-col justify-between items-start border-gray-400 border-[1px]'}>
+                        <div>{day.value}</div>
+                        <div className={day.event && 'bg-blue-300 p-2 text-start rounded-lg'}>{day.event && day.event.text}</div>
+                    </div>
                 ))}
             </div>
         </div>
