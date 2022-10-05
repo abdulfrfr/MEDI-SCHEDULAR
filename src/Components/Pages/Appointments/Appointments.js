@@ -52,7 +52,7 @@ for (let i = 1; i <= totalDaysInMonth; i++){
 useEffect(()=>{
     setPaddingDays(padding)
     setDays(mainDays)
-}, [paddingDays, days])
+}, [paddingDays, days, mainDays, padding])
 
 function nextMonth(){
     setCurrentMonth((prevValue)=> prevValue + 1)
@@ -92,7 +92,7 @@ function prevMonth(){
                     <div className='h-[15vh]'></div>
                 ))}
                 {days.map((day, index)=>(
-                    <div className='h-[15vh] p-3 flex justify-start items-start border-gray-400 border-[1px]'>{day}</div>
+                    <div className={day === new Date().getDate() && month === new Date().getMonth()  ? 'h-[15vh] bg-blue-200 p-3 flex justify-start items-start border-blue-400 border-[1px]':'h-[15vh] p-3 flex justify-start items-start border-gray-400 border-[1px]'}>{day}</div>
                 ))}
             </div>
         </div>
